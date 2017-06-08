@@ -19,6 +19,10 @@ list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
 
 
+
+## On the on hand the pair of functions is used in order to cache the inverse of a matrix.
+## On the other hand the next function first sets a special matrix object to allow it to be cached for the inverse
+
 cacheSolve <- function(x, ...) {
   m <- x$getinverse()
   if(!is.null(m)) {
